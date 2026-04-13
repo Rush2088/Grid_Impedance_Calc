@@ -226,53 +226,53 @@ export default function ResultsCard({
         <div className="mx-auto flex max-w-[620px] flex-col gap-4">
           {result ? (
             <>
-            <div className="flex justify-end">
-              <button
-                type="button"
-                onClick={handleCopy}
-                className={`inline-flex min-w-[110px] items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white/5 px-3 py-2 text-sm font-semibold transition ${
-                  copyStatus === 'copied'
-                    ? 'text-cyan-400'
-                    : 'text-white hover:bg-white/10'
-                }`}
-              >
-                {copyStatus === 'copied' ? (
-                  <>
-                    <span aria-hidden="true">✓</span>
-                    <span>Copied</span>
-                  </>
-                ) : (
-                  <>
-                    <span aria-hidden="true" className="text-base leading-none">⧉</span>
-                    <span>Copy</span>
-                  </>
-                )}
-              </button>
-            </div>
+              <div className="flex justify-end">
+                <button
+                  type="button"
+                  onClick={handleCopy}
+                  className={`inline-flex min-w-[110px] items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white/5 px-3 py-2 text-sm font-semibold transition ${
+                    copyStatus === 'copied'
+                      ? 'text-cyan-400'
+                      : 'text-white hover:bg-white/10'
+                  }`}
+                >
+                  {copyStatus === 'copied' ? (
+                    <>
+                      <span aria-hidden="true">✓</span>
+                      <span>Copied</span>
+                    </>
+                  ) : (
+                    <>
+                      <span aria-hidden="true" className="text-base leading-none">⧉</span>
+                      <span>Copy</span>
+                    </>
+                  )}
+                </button>
+              </div>
 
               <div className="overflow-hidden rounded-2xl border border-white/10 bg-black/25">
                 <div className="max-h-[28rem] overflow-auto">
-                  <table className="w-full border-collapse text-sm text-slate-100">
+                  <table className="w-full border-collapse text-xs sm:text-sm text-slate-100">
                     <thead className="sticky top-0 bg-slate-900/95 backdrop-blur">
                       <tr className="border-b border-white/10">
-                        <th className="w-[25%] px-3 py-2.5 text-left font-semibold">Parameter</th>
-                        <th className="w-[30%] px-3 py-2.5 text-left font-semibold">Value</th>
-                        <th className="w-[12%] px-3 py-2.5 text-left font-semibold">Unit</th>
+                        <th className="w-[25%] px-2 py-1.5 text-left font-semibold">Parameter</th>
+                        <th className="w-[30%] px-2 py-1.5 text-left font-semibold">Value</th>
+                        <th className="w-[12%] px-2 py-1.5 text-left font-semibold">Unit</th>
                       </tr>
                     </thead>
                     <tbody>
                       {summaryRows.map((section) => (
                         <Fragment key={section.section}>
                           <tr className="border-t border-white/10 bg-white/[0.04]">
-                            <td colSpan={3} className="px-3 py-2.5 font-semibold text-cyan-300">
+                            <td colSpan={3} className="px-2 py-1.5 font-semibold text-cyan-300">
                               {section.section}
                             </td>
                           </tr>
                           {section.rows.map(([parameter, value, unit], idx) => (
                             <tr key={`${section.section}-${idx}`} className="border-t border-white/5">
-                              <td className="px-3 py-2.5 align-top text-slate-200">{parameter}</td>
-                              <td className="px-3 py-2.5 font-mono text-xs sm:text-sm">{value}</td>
-                              <td className="px-3 py-2.5 text-slate-300">{unit}</td>
+                              <td className="px-2 py-1.5 align-top text-slate-200">{parameter}</td>
+                              <td className="px-2 py-1.5 font-mono text-xs sm:text-sm">{value}</td>
+                              <td className="px-2 py-1.5 text-slate-300">{unit}</td>
                             </tr>
                           ))}
                         </Fragment>
