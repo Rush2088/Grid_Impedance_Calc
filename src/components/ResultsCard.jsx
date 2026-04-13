@@ -165,7 +165,7 @@ export default function ResultsCard({
       ) : null}
 
       {step === 1 && (
-        <div className="flex flex-col gap-3 sm:gap-4">
+        <div className="flex flex-col gap-3 sm:gap-2.5">
           <FieldCard label="Grid Voltage" unit="kV">
             <select
               className="input-inline w-[6.5rem] sm:w-[7rem]"
