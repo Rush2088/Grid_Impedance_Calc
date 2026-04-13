@@ -61,34 +61,34 @@ input[type="number"] {
   }
 
   /* ===== INPUT ROW ===== */
-  .summary-chip {
-    @apply flex items-center justify-between gap-4 rounded-xl border border-white/10 bg-white/[0.05] p-4;
-  }
+.summary-chip {
+  @apply flex items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/[0.05] px-3 py-2;
+}
 
   .summary-label {
     @apply text-base text-slate-300 leading-tight;
-    min-width: 140px;
+    min-width: 120px;
   }
 
   .summary-input-wrap {
     @apply flex-1 max-w-[200px];
   }
 
-  .input-inline {
-    @apply w-full rounded-lg border border-white/5 bg-black/30 px-4 py-2 text-right text-base font-semibold text-white outline-none transition
-           focus:border-blue-500 focus:ring-2 focus:ring-blue-500/40;
-  }
+.input-inline {
+  @apply w-full rounded-lg border border-white/5 bg-black/30 px-3 py-1.5 text-right text-sm font-semibold text-white outline-none transition
+         focus:border-blue-500 focus:ring-2 focus:ring-blue-500/40;
+}
 
   .unit-base {
     @apply text-sm font-semibold text-slate-400;
-    min-width: 40px;
+    min-width: 36px;
     text-align: right;
   }
 
   /* ===== CHECKBOX ===== */
-  .summary-chip-checkbox {
-    @apply flex flex-col items-start gap-1 rounded-xl border border-white/10 bg-white/[0.05] p-4;
-  }
+.summary-chip-checkbox {
+  @apply flex flex-col items-start gap-1 rounded-xl border border-white/10 bg-white/[0.05] px-3 py-2;
+}
 
   .checkbox-row-wrap {
     display: flex;
